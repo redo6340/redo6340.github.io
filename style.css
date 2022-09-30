@@ -6,6 +6,27 @@ body {
     padding: 1em;
     margin: 0;
   }
+  nav {
+    background-color: black;
+    padding: .5em;
+    top: 0;
+    position: sticky;
+    
+  }
+  
+  nav ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    justify-content: space-evenly;
+  }
+  
+  nav a {
+    text-decoration: none;
+    text-decoration-color: #fff;
+    padding: .5em 1em;
+  }
 
   h1 {
     color: #000000;
@@ -51,7 +72,7 @@ body {
     color: #F4BDF4;
   }
 
-  ul {
+  .goals {
     background-color: #EFF7F0;
     border: 2px solid black;
     border-radius: 1.5em;
@@ -65,9 +86,52 @@ body {
     padding: 15px 32px;
   }
 
-  button:hover{
+  button:hover {
     border: 2px solid black;
     border-radius: 1.5em;
     background-color: #F4BDF4;
     padding: 15px 32px;
   }
+
+  .photos {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 5px;
+    
+  }
+
+  .grid div{
+    text-align: center;
+    align-items: center;
+    border: #F4BDF4;
+    border-radius: 1px;
+    border-style: solid;
+  }
+
+  @media screen and (min-width: 1080px) and (max-width: 1900px) {
+    .photos {
+      display: grid;
+      grid-template-columns: 3fr 1fr;
+      column-gap: 50px;
+  }
+
+  @media screen and (min-width: 70em) {
+    .photos {
+      grid-template-columns: 3fr 1fr;
+      column-gap: 20px;
+    }
+    nav ul {
+      flex: 1
+    }
+    .goals {
+      background-color: #EFF7F0;
+      border: 2px solid black;
+      border-radius: 1.5em;
+      padding: 25px;
+  }
+
+
+  
