@@ -38,18 +38,18 @@ const employees = {
   }
 
 
-  function populateHeader(obj) {
+  function updateRaise(obj) {
     let header = document.querySelector('header');
     let myH1 = document.createElement('h1');
     myH1.textContent = obj.companyName;
     header.appendChild(myH1);
 
     const myPara = document.createElement('p');
-    myPara.textContent = `Website: ${obj.website} // Department: ${obj.formed}`;
+    myPara.textContent = `Website: ${obj.website} // Department: ${obj.}`;
     header.appendChild(myPara);
   }
 
-  function populateHeroes(obj) {
+  function totalSalary(obj) {
     const section = document.querySelector('section');
     const employee = obj.employees;
 
