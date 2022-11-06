@@ -1,7 +1,7 @@
 const quoteButton = document.querySelector('.new-quote');
 quoteButton.addEventListener('click', getQuote);
 
-const endpoint = 'https://api.whatdoestrumpthink.com/api/v1/quotes/random';
+const endpoint = 'https://www.boredapi.com/api/activity';
 
 async function getQuote() {
     console.log('test click worked');
@@ -11,11 +11,11 @@ async function getQuote() {
 
     let json_response = JSON.parse(response);
    // console.log(json_response);
-    console.log(json_response['message']);
+    console.log(json_response['activity']);
     
    // .then(text => text.text());
    // console.log(text('message'));
-   displayQuote(json_response['message']);
+   displayQuote(json_response['activity']);
 }
 
 function displayQuote(x) {
@@ -27,5 +27,19 @@ function displayQuote(x) {
     document.getElementById('js-quote-text').textContent = x;
 }
 
+function update() {
+    var element = document.getElementById("myprogressBar");   
+    var width = 1;
+    var identity = setInterval(scene, 1);
+    function scene() {
+      if (width >= 100) {
+        clearInterval(identity);
+      } else {
+        width++; 
+        element.style.width = width + '%'; 
+        element.innerHTML = width * 1  + '%';
+      }
+    }
+  }
 //gets Quote on screen
 getQuote();
