@@ -36,8 +36,8 @@ function update() {
         clearInterval(identity);
       } else {
         width++; 
-        element.style.width = width + '%'; 
-        element.innerHTML = width * 1  + '%';
+        element.style.width = width + 1; 
+        element.innerHTML = width * 1  + 1;
       }
     }
   }
