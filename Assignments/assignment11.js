@@ -43,3 +43,4 @@ function update() {
   }
 //gets Quote on screen
 getQuote();
+
