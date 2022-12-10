@@ -4,7 +4,10 @@ function check() {
     console.log('test');
 }
 
+function submit() {
+    alert(output.textContent);
 
+}
 
 
 
@@ -12,8 +15,7 @@ function check() {
 
 
 function random() {
-    outputInt = randomNumber(0, 8000000000);
-    alert(output.textContent);
+    outputInt = randomNumber(0, 9999999999);
     output.textContent = outputInt;
 }
 
